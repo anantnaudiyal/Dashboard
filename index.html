@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard with Sidebar & Charts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar with logo and navigation -->
+    <div class="sidebar">
+      <div class="logo">Company Logo</div>
+      <ul class="nav">
+        <li>1. Indicator</li>
+        <li>2. Entry Data</li>
+        <li class="active">3. Monthly Dashboard</li>
+        <li>4. YTD Dashboard</li>
+      </ul>
+    </div>
+
+    <!-- Main content area -->
+    <div class="main-content">
+      <!-- Top header / dark blue strip -->
+      <div class="header">
+        <h1>Monthly Dashboard</h1>
+        <div>
+          <span>Select Month</span>
+          <select id="month-select">
+            <option value="JAN">January</option>
+            <option value="FEB">February</option>
+            <option value="MAR">March</option>
+            <option value="APR">April</option>
+            <option value="MAY">May</option>
+            <option value="JUN" selected>June</option>
+            <option value="JUL">July</option>
+            <option value="AUG">August</option>
+            <option value="SEP">September</option>
+            <option value="OCT">October</option>
+            <option value="NOV">November</option>
+            <option value="DEC">December</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Content below header -->
+      <div class="content">
+        <!-- KPI Cards Row -->
+        <div class="kpi-cards">
+          <div class="kpi-card">
+            
+            <div class="kpi-value" id="kpi-sales">KPIs</div>
+          </div>
+          <div class="kpi-card">
+            
+            <div class="kpi-value" id="kpi-sales">1,223</div>
+            <div class="kpi-title">Sales</div>
+          </div>
+          <div class="kpi-card">
+            
+            <div class="kpi-value" id="kpi-sales-target">921</div>
+            <div class="kpi-title">Sales Target</div>
+          </div>
+          <div class="kpi-card">
+            
+            <div class="kpi-value" id="kpi-target-achievement">128%</div>
+            <div class="kpi-title">Target Achievement</div>
+          </div>
+          <div class="kpi-card">
+            
+            <div class="kpi-value" id="kpi-sales-last-year">823</div>
+            <div class="kpi-title">Sales Last Year</div>
+          </div>
+          <div class="kpi-card">
+            
+            <div class="kpi-value" id="kpi-gross-profit">391</div>
+            <div class="kpi-title">Gross Profit</div>
+          </div>
+          <div class="kpi-card">
+            
+            <div class="kpi-value" id="kpi-gross-margin">32%</div>
+            <div class="kpi-title">Gross Profit Margin</div>
+          </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts-section">
+
+          
+          
+            
+            <div class="chart-container chart1">
+              <div class="chart-title">Receivable Days Outstanding</div>
+              <hr>
+              <canvas id="barChart1"></canvas>
+            </div>
+
+            <div class="chart-container chart2">
+              <div class="chart-title">Sales Amount by Product/Category</div>
+              <canvas id="barChart2"></canvas>
+            </div>
+
+            <div class="chart-container chart3">
+              <div class="chart-title">Sales Amount by Product/Category</div>
+              <h>
+              <canvas id="barChart3"></canvas>
+            </div>
+
+            <div class="chart-container chart4">
+              <div class="chart-title">Sales by Channel</div>
+              <canvas id="donutChart1"></canvas>
+            </div>
+
+            <div class="chart-container chart5">
+              <div class="chart-title">Sales by Channel</div>
+              <canvas id="donutChart2"></canvas>
+            </div>
+
+            <div class="chart-container chart6">
+              <div class="chart-title">Sales Amount by Region</div>
+              <canvas id="barChart4"></canvas>
+            </div>
+
+            <div class="chart-container chart7">
+              <div class="chart-title">Sales by Channel</div>
+              <canvas id="donutChart3"></canvas>
+            </div>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+
+  <!-- Include Chart.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
