@@ -19,11 +19,12 @@
       </ul>
     </div>
 
+
     <!-- Main content area -->
     <div class="main-content">
       <!-- Top header / dark blue strip -->
       <div class="header">
-        <h1>Monthly Dashboard</h1>
+        <h1>3. Monthly Dashboard</h1>
         <div>
           <span>Select Month</span>
           <select id="month-select">
@@ -114,6 +115,11 @@
             <div class="chart-container chart5">
               <div class="chart-title">Sales by Channel</div>
               <canvas id="donutChart2"></canvas>
+              <div id="center-label">48<br>Days</div>
+              <div id="sub-labels">
+                <div style="color: teal;">Target: 30 Days</div>
+                <div style="color: gray;">Last Year: 48 Days</div>
+              </div>
             </div>
 
             <div class="chart-container chart6">
@@ -124,6 +130,11 @@
             <div class="chart-container chart7">
               <div class="chart-title">Sales by Channel</div>
               <canvas id="donutChart3"></canvas>
+              <div id="center-label">32<br>Days</div>
+              <div id="sub-labels">
+                <div style="color: teal;">Target: 30 Days</div>
+                <div style="color: gray;">Last Year: 33 Days</div>
+              </div>
             </div>
             
         </div>
@@ -134,8 +145,10 @@
   
   
 
-  <!-- Include Chart.js from CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
   <script src="./script.js"></script>
 </body>
 </html>
